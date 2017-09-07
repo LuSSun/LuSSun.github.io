@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/LuSSun">
-  <title>Archives: 2017/9 | LuSSun 个人博客</title>
+  <title>pjax: 当ajax遇上pushState | LuSSun 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LuSSun 个人博客">
-<meta property="og:url" content="https://github.com/LuSSun/archives/2017/09/index.html">
+  <meta name="description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
+<meta name="keywords" content="js,html5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pjax: 当ajax遇上pushState">
+<meta property="og:url" content="https://github.com/LuSSun/2014/02/12/about-pjax/index.html">
 <meta property="og:site_name" content="LuSSun 个人博客">
+<meta property="og:description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
+<meta property="og:updated_time" content="2017-09-07T10:29:47.730Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LuSSun 个人博客">
+<meta name="twitter:title" content="pjax: 当ajax遇上pushState">
+<meta name="twitter:description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
   
     <link rel="alternative" href="/atom.xml" title="LuSSun 个人博客" type="application/atom+xml">
   
@@ -145,97 +150,230 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-about-pjax" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/07/note/" class="archive-article-date">
-  	<time datetime="2017-09-07T10:25:33.715Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/07/第二页/" class="archive-article-date">
-  	<time datetime="2017-09-07T04:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/07/第二页/">第二页</a>
+    <h1 class="article-title" itemprop="name">
+      pjax: 当ajax遇上pushState
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/07/前端开发/" class="archive-article-date">
-  	<time datetime="2017-09-07T04:02:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-07</time>
+        
+        <a href="/2014/02/12/about-pjax/" class="archive-article-date">
+  	<time datetime="2014-02-12T00:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-02-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/07/前端开发/">前端开发</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>var pjax = pushState + ajax;<br>小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…          </p>
+</blockquote>
+<a id="more"></a>
+<p>##<strong>一、简介</strong><br>pushState是html5中提供的方法，用以</p>
+<ul>
+<li>无刷新的更新浏览器地址栏；            </li>
+<li>如其名称，将新地址push到历史堆栈中            </li>
+</ul>
+<p>用法：<code>pushState(data, title ,url)</code>            </p>
+<p>data为保存的对象，可以在window.onpopstate时获取到；title为页面标题；url为需地址栏和历史发生改变的url。<br>正是这点看似很平常的功能，跟ajax结合到一起产生了火花。因为，ajax最擅长的事情就是局部刷新页面。</p>
+<p>##<strong>二、ajax的纠结历史</strong><br>一切可以从ajax最擅长的事情说起。<br>ajax作为一个异步请求模型，从最初设计开始，也许压根就没打算将它跟浏览器历史挂钩。原因是历史堆栈所记录的，某种意思上可以说是顺序，跟我们理解的“同步”更为密切。</p>
+<p>因而，<code>ajax可以无刷新改变页面内容，却无法改变页面的url</code>。</p>
+<ul>
+<li>####历史问题1 - 如何操控历史</li>
+</ul>
+<p>当单页面越来越流行，操作记录却很容易被忽略。假设有这样的单页面，按照分类点击，界面逐层递进：<code>体育 - 篮球 -nba -马刺队 - 邓肯</code><br>当我们点了4下到“邓肯”界面时，一个不小心的刷新，出现在你面前的也许是“体育”。原因是操作记录没有被记录。<br>而通常的解决方案是修改hash，每递进一层，去更新url的hash值，这样的方法：</p>
+<ol>
+<li>刷新时预先判断url的hash，从而知道这是哪一层，加载相应数据；          </li>
+<li>支持了历史</li>
+</ol>
+<p>这样的方式貌似比较完善，其实不然。</p>
+<ul>
+<li>####历史问题2 - 对搜索引擎不友好</li>
+</ul>
+<p>最大的问题是，hash后生成的内容是不会被搜索引擎引用到。数据不能被爬取，无疑是浪费和损失。因此google放言，咱可以约定个协议：<code>#!xxx</code>这样hash的url，google也去爬取。称之为<code>hash bang</code>（哈希大爆炸？）。这一协议，在g+，twitter，人人，新浪微博上都可以看到。</p>
+<p>事实上，ajax最或缺的两个问题，恰好被pushState的功能补充完善。</p>
+<p>##<strong>三、pjax带来的价值</strong><br>除去补齐了ajax的问题，我们发现pjax会给web带来更多的好处。<br>回到开始说的“两包方便面”，我的意思是，有时你访问两个url，部分数据是相同的。比如百度贴吧，第一页和第二页的区别只是帖子内容（卡片）的不同，网站外框部分（方便面）都是一样的，这些东西就不需要在页面刷新时重复加载。</p>
+<p>ajax处理这样的局部刷新，已经给我们带来了web2.0的体验，而加上pushstate的ajax则更进一步：</p>
+<ol>
+<li>一个url对应一套数据，有利于SEO；</li>
+<li>更改数据和url时，只是局部刷新，带来较好的用户体验；</li>
+<li>兼容性好，对不支持pushstate的浏览器，url也能正常请求页面（虽然有重复加载）；</li>
+<li>刷新页面时，由于是url唯一，能正常加载到用户希望看到的数据，比处理hash的方式更方便；</li>
+<li>后退与前进的浏览器操作，依然可以局部刷新（通过onpushstate事件捕获）</li>
+</ol>
+<p>##<strong>四、注意事项</strong></p>
+<p>然而pjax不等于单纯的分离使用pushstate与ajax，还必须得做一些封装。缘于以下我能想到的注意事项：</p>
+<ul>
+<li>服务器端增加额外处理逻辑<br>服务器端，需要根据请求的参数，作出全页渲染或局部渲染响应<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Accept:text/html, */*; q=0.01</div><div class="line">Accept-Encoding:gzip,deflate,sdch</div><div class="line">Connection:keep-alive</div><div class="line">Host:qianduannotes.duapp.com</div><div class="line">User-Agent:AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36</div><div class="line">X-Requested-With:XMLHttpRequest</div><div class="line">X-PJAX:true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>比如请求头部可以设定一个X-PAJX:true，用以通知服务器。</p>
+<ul>
+<li><p>浏览器兼容<br>假如浏览器不支持pushstate，提供fallback操作，直接打开需更改url的地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.support.pjax = window.history &amp;&amp; window.history.pushState</div><div class="line">// Fallback</div><div class="line">if ( !$.support.pjax ) &#123;</div><div class="line">  $.pjax = function( options ) &#123;</div><div class="line">    window.location = $.isFunction(options.url) ? options.url() : options.url</div><div class="line">  &#125;</div><div class="line">  $.fn.pjax = function() &#123; return this &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>本地存储机制<br>无疑pjax与localstorage共同使用可以进一步提升体验，但这一步容易忽略的是数据上报。</p>
+</li>
+</ul>
+<p>##<strong>五、参考资料</strong><br><a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a><br><a href="https://github.com/welefen/pjax">welefen封装的pjax</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/LuSSun/2014/02/12/about-pjax/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/02/10/brave-new-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          美丽新世界
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2013/08/11/brief-oauth/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈OAuth1,OAuth2异同</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -258,8 +396,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
