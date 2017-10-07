@@ -4,16 +4,14 @@ title: "使用gulp构建自动化工作流"
 date: 2017-09-07 08:55
 comments: true
 tags: 
-	- js 
-	- html5
-	- gulp
+    - gulp
 ---
 
 - [x] 简单易用
 - [x] 高效构建
 - [x] 高质量的生态圈
 
-**Gulp**就是一种可以自动化完成我们开发过程中大量的重复工作
+**Gulp**就一种可以自动化完成我们开发过程中大量的重复工作，提高效率的构建工具。
 - 预处理语言的编译
 -  js css html 压缩混淆
 -   图片体积优化
@@ -51,9 +49,10 @@ tags:
 当配置完gulp.file后运行 gulp：
 
 > $ gulp
+
 ### 安装相关插件
 
-1. 自动加载插件（gulp-load-plugins）
+**自动加载插件（gulp-load-plugins）**
 
 > 安装：npm install gulp-load-plugins –save-dev 
 > 要使用gulp的插件，首先得用require来把插件加载进来，如果我们要使用的插件非常多，那我们的gulpfile.js文件开头可能就会是这个样子的：
@@ -67,8 +66,8 @@ var gulp = require('gulp'),
     //更多的插件...
     z = require('gulp-z');   
 ```
-> 虽然这没什么问题，但会使我们的gulpfile.js文件变得很冗长，看上去不那么舒服。g> ulp-load-plugins插件正是用来解决这个问题。 
-> gulp-load-plugins这个插件能自动帮你加载package.json文件里的gulp插件。例如假> > 设你的package.json文件里的依赖是这样的:
+> 虽然这没什么问题，但会使我们的gulpfile.js文件变得很冗长，看上去不那么舒服gulp-load-plugins插件正是用来解决这个问题。 
+> gulp-load-plugins这个插件能自动帮你加载package.json文件里的gulp插件。例如假 设你的package.json文件里的依赖是这样的:
 
 
 ```
@@ -89,7 +88,7 @@ var gulp = require('gulp');
 //加载gulp-load-plugins插件，并马上运行它
 var plugins = require('gulp-load-plugins')();
 ```
-### 重命名（gulp-rename）
+**重命名（gulp-rename）**
 
 > 安装：npm install gulp-rename –save-dev
 > 用来重命名文件流中的文件。 
@@ -109,7 +108,7 @@ gulp.task('rename', function () {
     //关于gulp-rename的更多强大的用法请参考https://www.npmjs.com/package/gulp-rename
 });
 ```
-### js文件压缩（gulp-uglify）
+**js文件压缩（gulp-uglify）**
 > 安装：npm install gulp-uglify –save-dev 
 > 用来压缩js文件，使用的是uglify引擎
 
@@ -123,7 +122,7 @@ gulp.task('minify-js', function () {
     .pipe(gulp.dest('dist/js')); //压缩后的路径
 });
 ```
-### css文件压缩（gulp-cssnano）
+ **css文件压缩（gulp-cssnano）**
 
 > 安装：npm install gulp-cssnano –save-dev 
 > 要压缩css文件时可以使用该插件
@@ -143,7 +142,7 @@ gulp.task('style', function() {
 });
 
 ```
-###  html文件压缩（gulp-htmlmin）
+ **html文件压缩（gulp-htmlmin）**
 > 安装：npm install gulp-htmlmin  –save-dev
 > 用来压缩html文件
 
@@ -159,7 +158,7 @@ gulp.task('minify-html', function () {
     })) //压缩
     .pipe(gulp.dest('dist/html'));
 ```
-### 文件合并（gulp-concat）
+**文件合并（gulp-concat）**
 > 安装：npm install gulp-concat –save-dev
 > 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 
@@ -173,7 +172,7 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('dist/js'));
 });
 ```
-### less的编译（gulp-less）
+**less的编译（gulp-less）**
 > less使用gulp-less,安装：npm install gulp-less–save-dev
 
 ```
@@ -187,7 +186,7 @@ gulp.task('style', function() {
     .pipe(gulp.dest('dist/styles'));
 });
 ```
-### 图片压缩（gulp-imagemin）
+**图片压缩（gulp-imagemin）**
 > 可以使用gulp-imagemin插件来压缩jpg、png、gif等图片。 
 > 安装：npm install gulp-imagemin –save-dev
 
@@ -205,7 +204,7 @@ gulp.task('default', function () {
         .pipe(gulp.dest('dist'));
 });
 ```
-### 自动刷新（browser-sync）
+**自动刷新（browser-sync）**
 
 > 安装:npm install browser-sync –save-dev 
 > 当代码变化时，它可以帮我们自动刷新页面 
@@ -243,14 +242,14 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('html',function(){
-	gulp.src('./index.html')
-		.pipe(htmlmin({
-	      collapseWhitespace: true,
-	      removeComments: true
-	    }))
-	    .pipe(rename('index.min.html'))
-		.pipe(gulp.dest('./'))
-		.pipe(browserSync.reload({
+    gulp.src('./index.html')
+        .pipe(htmlmin({
+          collapseWhitespace: true,
+          removeComments: true
+        }))
+        .pipe(rename('index.min.html'))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.reload({
        stream:true
     }));
 })
@@ -260,32 +259,32 @@ var less = require('gulp-less'),
     rename = require('gulp-rename');
 
 gulp.task('style',function(){
-	gulp.src('./css/*.css')
-		.pipe(cssnano())
-		.pipe(rename('main.min.css'))
-		.pipe(gulp.dest('css'))
-		.pipe(browserSync.reload({
-	       stream:true
-	    }));
+    gulp.src('./css/*.css')
+        .pipe(cssnano())
+        .pipe(rename('main.min.css'))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+           stream:true
+        }));
 })
 //  JS合并 压缩混淆
 var uglify = require('gulp-uglify');
 
 gulp.task('script',function(){
-	gulp.src('./js/*.js')
-		.pipe(uglify())
-		.pipe(rename('main.min.js'))
-		.pipe(gulp.dest('js'))
-		.pipe(browserSync.reload({
-	       stream:true
-	    }));
+    gulp.src('./js/*.js')
+        .pipe(uglify())
+        .pipe(rename('main.min.js'))
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({
+           stream:true
+        }));
 })
 
 
 
 gulp.task('image',function(){
-	gulp.src('./img/*.*')
-		.pipe(browserSync.reload({
+    gulp.src('./img/*.*')
+        .pipe(browserSync.reload({
        stream:true
     }));
 })
@@ -293,17 +292,17 @@ gulp.task('image',function(){
 var browserSync = require('browser-sync');
 
 gulp.task('server',function(){
-	browserSync({
+    browserSync({
     server: {
       baseDir: ['./']
     },
   }, function(err, bs) {
     console.log(bs.options.getIn(["urls", "local"]));
   });
-	gulp.watch('./index.html',['html']);
-	gulp.watch('./css/*.css',['style']);
-	gulp.watch('./js/*.js',['script']);
-	gulp.watch('./img/*.*',['image']);
+    gulp.watch('./index.html',['html']);
+    gulp.watch('./css/*.css',['style']);
+    gulp.watch('./js/*.js',['script']);
+    gulp.watch('./img/*.*',['image']);
 })
 
 ```
